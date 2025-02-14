@@ -37,11 +37,8 @@ export async function fetchLatestInvoices() {
       FROM invoices
       JOIN customers ON invoices.customer_id = customers.id
       ORDER BY invoices.date DESC
-      LIMIT 0`;
+      LIMIT 5`;
     
-    console.log('acessou bd')
-    console.log(data);
-
     const latestInvoices = data.map((invoice) => ({
       ...invoice,
       amount: formatCurrency(invoice.amount),
