@@ -32,7 +32,6 @@
     "scripts/seed.js"
   ],
   "exclude": [
-    "node_modules",
-    "app/seed/route.ts"
+    "node_modules"
   ]
 }
